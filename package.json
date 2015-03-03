@@ -1,0 +1,19 @@
+{
+  "name": "SampleGrunt",
+  "version": "0.1.0",
+  "author": "Brandon Random",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-htmlhint": "*",
+    "grunt-jsdoc": "^0.5.8",
+    "matchdep": "*"
+  }
+}
