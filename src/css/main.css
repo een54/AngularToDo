@@ -1,0 +1,45 @@
+li {
+	list-style: none;
+	border: 1px solid black;
+	width:90%;
+	position:relative;
+	left:2.5%;
+}
+
+li p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.heading {
+	text-align: center;
+	font-size: 2em;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.eventDescription {
+	float:left;
+	width:80%;
+}
+
+.eventFunction {
+	float: left;
+}
+
+.eventList {
+	border: 1px solid black;
+	width:90%;
+	position:relative;
+	left:5%;
+	overflow:auto;
+}
+
+.createForm {
+	position: relative;
+	left: 15%;
+}
