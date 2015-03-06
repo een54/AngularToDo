@@ -10,27 +10,51 @@
 		<p> Angular ToDo App </p>
 	</div>
 
-	<div class="eventList">
-		
-		<span> {{remaining()}} of {{todos.length}} remaining</span>
-		[ <a href="" ng-click="archive()">archive</a> ]
+	<div class="eventList">		
+		<span> {{selected()}} of {{todos.length}} selected</span>
+		[ <a href="" ng-click="archive()">archive</a> ]		
+	</br>
+		<span> {{remaining()}} of {{todos.length}} remaining to do!</span>
 
 		<ul>
 			<li ng-repeat="todo in todos">
-				<input type="checkbox" ng-model="todo.done">
+				<input type="checkbox" ng-model="todo.selected">
           		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>
 			</li>			
 		</ul>
 	</div>
 
-	<form class="createForm" ng-submit="addTodo()">
+	<div class="configDiv">
+		<p> Configuration </p>
+		<form class="createForm" ng-submit="addTodo()">
 			<input type="text" ng-model="todoText" size="30" placeholder="Add new to do here">
 			<input class="btn-primary" type="submit" value="add">
-	</form>
+			</br>
+			<span> Show Archived? </span>
+			<input type="checkbox" ng-model="showArchived">
+		</form>
+	</div>
+
+	<div class="eventList" ng-show="showArchived">
+		<span> {{archivedSelected()}} of {{oldTodos.length}} selected</span>
+		[ <a href="" ng-click="unarchive()">unarchive</a> ]	
+
+		<ul>
+			<li ng-repeat="todo in oldTodos" nop>
+				<input type="checkbox" ng-model="todo.selected">
+          		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>
+			</li>			
+		</ul>
+	</div>
 
 	<script src="..\..\bower_components\jquery\dist\jquery.min.js"></script>
-	<script src="..\..\bower_components\angular\angular.min.js"></script>
+	<script src="..\..\bower_components\angular\angular.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script> 
+	<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 	<script src="../js/index.js"></script>
+
 </body>
 
 </html>

@@ -1,9 +1,23 @@
+.eventList {
+	/*border-radius: 25%;*/
+
+}
+
 li {
 	list-style: none;
 	border: 1px solid black;
 	width:90%;
 	position:relative;
 	left:2.5%;
+	background-color: #fa7a55;
+}
+
+li:nth-child(n+2), li:first-child {
+	border-bottom: 0;
+}
+
+li:last-child {
+	border-bottom:1px solid black;
 }
 
 li p {
@@ -31,6 +45,23 @@ li p {
 	float: left;
 }
 
+.doneButton {
+	position:relative:;
+	float:right;
+}
+
+.configDiv {
+	border: 1px solid black;
+	position:relative;
+	width: 50%;
+	left: 25%;
+	margin: 5%;
+}
+
+.configDiv p {
+	text-align: center;
+}
+
 .eventList {
 	border: 1px solid black;
 	width:90%;
@@ -42,4 +73,6 @@ li p {
 .createForm {
 	position: relative;
 	left: 15%;
+	margin-left: auto;
+	margin-right: auto;
 }
