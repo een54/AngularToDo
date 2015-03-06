@@ -1,8 +1,3 @@
-.eventList {
-	/*border-radius: 25%;*/
-
-}
-
 li {
 	list-style: none;
 	border: 1px solid black;
@@ -24,6 +19,11 @@ li p {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+}
+
+body {
+	background-color: #C0FF1E;
+
 }
 
 .heading {
@@ -56,6 +56,8 @@ li p {
 	width: 50%;
 	left: 25%;
 	margin: 5%;
+	background-color: #FAECE5;
+
 }
 
 .configDiv p {
@@ -68,11 +70,81 @@ li p {
 	position:relative;
 	left:5%;
 	overflow:auto;
+	background-color: #BADA55;
+	/*border-radius: 15%;*/
 }
+
+
 
 .createForm {
 	position: relative;
 	left: 15%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/**********************
+* 
+* Animation code
+*  
+******************** */
+
+/*.standardTodo.ng-enter {
+  -webkit-transition:1s linear all;
+  -moz-transition:1s linear all;
+  -o-transition:1s linear all;
+  transition:1s linear all;
+  opacity:0;
+}
+
+.standardTodo.ng-enter.ng-enter-active {  
+  opacity:1;
+}
+
+.standardTodo.ng-leave {  
+  opacity:1;
+}
+
+.standardTodo.ng-leave {
+  -webkit-animation:1s my_animation;
+  -moz-animation:1s my_animation;
+  -o-animation:1s my_animation;
+  animation:1s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}*/
+
+.standardTodo.ng-enter {
+  -webkit-transition:1s linear all;
+  -moz-transition:1s linear all;
+  -o-transition:1s linear all;
+  transition:1s linear all;
+  left:-2000px;
+}
+
+.standardTodo.ng-enter.ng-enter-active {  
+  left:0;
+}
+
+.ng-enter-stagger {
+	transition-delay: 0.25s;
+}
+
+/*.standardTodo.ng-leave {  
+  left:0;
+}*/
+
+.standardTodo.ng-leave {
+  -webkit-animation:1s my_animation;
+  -moz-animation:1s my_animation;
+  -o-animation:1s my_animation;
+  animation:1s my_animation;
+}
+
+@keyframes my_animation {
+  from { left:0px; }
+  to { left:-2000pxpx; }
 }
