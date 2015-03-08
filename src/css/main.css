@@ -4,7 +4,7 @@ li {
 	width:90%;
 	position:relative;
 	left:2.5%;
-	background-color: #fa7a55;
+	background-color: #BADA55;
 }
 
 li:nth-child(n+2), li:first-child {
@@ -21,8 +21,13 @@ li p {
 	text-align: center;
 }
 
+li.span {
+	margin:1.25em;
+
+}
+
 body {
-	background-color: #C0FF1E;
+	background-color: #A3CCCC;
 
 }
 
@@ -57,11 +62,13 @@ body {
 	left: 25%;
 	margin: 5%;
 	background-color: #FAECE5;
-
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
 .configDiv p {
-	text-align: center;
+	text-align: center;	
 }
 
 .eventList {
@@ -70,11 +77,16 @@ body {
 	position:relative;
 	left:5%;
 	overflow:auto;
-	background-color: #BADA55;
-	/*border-radius: 15%;*/
+	background-color: #FAECE5;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
+.eventList span {
+	margin: 1.25em;
 
+}
 
 .createForm {
 	position: relative;

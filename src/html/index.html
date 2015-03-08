@@ -18,9 +18,10 @@
 		<ul>
 			<li ng-repeat="todo in data | filter:{ archived: false }" class="standardTodo">
 				<input type="checkbox" ng-model="todo.selected">
-          		<span class="done-{{todo.done}}">{{todo.todoText}} - <a ng-click="archive(todo.$id)">Archive</a></span>
+          		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+          		<button class="doneButton" ng-click="archive(todo.$id)">Archive</button>
           		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>
-
+          		
 			</li>			
 		</ul>
 	</div>
@@ -43,9 +44,9 @@
 		<ul>
 			<li ng-repeat="todo in data |  filter:{ archived: true }" class="standardTodo">
 				<input type="checkbox" ng-model="todo.selected">
-          		<span class="done-{{todo.done}}">{{todo.todoText}} - <a ng-click="archive(todo.$id)">Archive</a></span>
-          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>
-
+          		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+          		<button class="doneButton" ng-click="archive(todo.$id)">Unarchive</button>
+          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>          		
 			</li>			
 		</ul>
 	</div>

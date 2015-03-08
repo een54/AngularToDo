@@ -16,8 +16,7 @@
 			*
 			*	Handle adding new todos
 			*
-			***********************************************************/							
-			// TODO: Add animation when the todo is added to make it slide in
+			***********************************************************/										
 			$scope.addTodo = function() { 
 				// Ensure the text trying to be entered actually has something in it!
 				if ($scope.todoText === '' || $scope.todoText == null) {					
