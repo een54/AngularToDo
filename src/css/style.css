@@ -1,0 +1,140 @@
+.datepicker_container{
+	position: absolute;
+	display: inline-block;
+	top: 32px;
+	left: 40px;
+	z-index: 1;
+	width:550px;
+	height:200px;
+	background-color: #ccc;
+	padding:10px;
+}
+
+.datepicker{
+	position: absolute;
+	display: block;
+	float:left;
+	z-index: 1;
+	width:266px;
+	height:auto;
+	font-family:arial;
+	background-color: #FFF5CC;
+	border:2px solid #FAD99B;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+.date{
+	display: table;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;	
+}
+
+
+.alldays{
+	position:relative;
+	width:266px;
+	height:200px;
+}
+
+.daybox {
+	position:relative;
+	float:left;
+	text-align: center;
+	width:28px;
+	margin:5px 5px 5px 5px;
+	cursor:pointer;
+}
+
+.boxWithDays{
+	position:relative;
+	float:left;
+	text-align: center;
+	font-weight: bold;
+	width:28px;
+	margin:5px 5px 5px 5px;
+
+}
+
+.daybox:hover {
+	background-color: #FAD99B;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;		
+}
+
+.daybox:active,
+.daybox.today {
+	background-color: #FFE16B;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;		
+}
+
+
+.showNameDays{
+	position:relative;
+	display: block;
+	width:28px;
+	margin:5px 5px 5px 5px;
+}
+
+/*.block {
+	display:block;
+	border:2px solid #FAD99B;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}*/
+
+.month {
+	position:relative;
+	display:inline-block;
+	float:left;
+	width:226px;
+	height:20px;
+	background-color: #FFE5B5;
+	font-style:italic;
+	color:#000;
+}
+
+
+.prevbtn{
+	position:relative;
+	display:inline-block;
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: #FAD99B;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.nextbtn{
+	position:relative;
+	display:inline-block;
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: #FAD99B;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.closebtn{
+	position:relative;
+	display: block;
+	text-align: center;
+	width:20px;
+	height:20px;
+	background-color: #FAD99B;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+
+
+

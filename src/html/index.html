@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="../css/main.css" />
+	<link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body ng-controller="TodoController">
@@ -11,17 +12,25 @@
 	</div>
 
 	<div class="eventList">		
-		<span> {{selected()}} of {{(data|filter:{archived: false}).length}} selected</span>		
+		<!-- <span> {{selected()}} of {{(data|filter:{archived: false}).length}} selected</span>	
 		</br>
-		<span> {{remaining()}} of {{(data|filter:{archived: false}).length}} remaining to do!</span>
+		<span> {{remaining()}} of {{(data|filter:{archived: false}).length}} remaining to do!</span> -->
+		
+		<div id="signpostDiv">
+			<img id="leeSin" src="../../Assets/leeSinKick1.png" />
+			<p> {{remaining()}}<span>remaining</span></p>
+			<audio id="leeSinAttack" preload="auto">
+			   <source src="../../Assets/leeSinAttack.ogg">
+			</audio>		
+		</div>
 
 		<ul>
 			<li ng-repeat="todo in data | filter:{ archived: false }" class="standardTodo">
-				<input type="checkbox" ng-model="todo.selected">
-          		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+				<!-- <input type="checkbox" ng-model="todo.selected"> -->
+          		<span class="done-{{todo.done}}">{{todo.todoText}} -- Created on: {{todo.createdDate}} -- Do by: {{todo.targetDate}}</span>
           		<button class="doneButton" ng-click="archive(todo.$id)">Archive</button>
-          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>
-          		
+          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo.$id)">Done</button>   
+          		<div style="clear:both"></div>       		
 			</li>			
 		</ul>
 	</div>
@@ -30,6 +39,7 @@
 		<p> Configuration </p>
 		<form class="createForm" ng-submit="addTodo()">
 			<input type="text" ng-model="todoText" size="30" placeholder="Add new to do here">
+			<input type="text" id="datepicker-field" placeholder="Add target date here">
 			<input class="btn-primary" type="submit" value="add">
 			</br>
 			<span> Show Archived? </span>
@@ -44,9 +54,10 @@
 		<ul>
 			<li ng-repeat="todo in data |  filter:{ archived: true }" class="standardTodo">
 				<input type="checkbox" ng-model="todo.selected">
-          		<span class="done-{{todo.done}}">{{todo.todoText}}</span>
+          		<span class="done-{{todo.done}}">{{todo.todoText}} -- Created on: {{todo.createdDate}}</span>
           		<button class="doneButton" ng-click="archive(todo.$id)">Unarchive</button>
-          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo)">Done</button>          		
+          		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo.$id)">Done</button>   
+          		<div style="clear:both"></div>           		
 			</li>			
 		</ul>
 	</div>
@@ -57,6 +68,10 @@
 	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script> 
 	<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 	<script src="../js/index.js"></script>
+	<script src="../js/datepicker.js"></script>
+	<script type="text/javascript">
+	$('#datepicker-field').DatePickerTotal();
+</script> 
 
 </body>
 
