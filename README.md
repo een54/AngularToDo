@@ -11,10 +11,10 @@ Main use of the project is to familiarise myself with Angular and also to practi
 - Firebase
 
 ## Installation (Assuming git is installed)
-1 git clone https://github.com/een54/AngularToDo.git
-2 bower install
-3 ???
-4 profit
+1. git clone https://github.com/een54/AngularToDo.git
+2. bower install
+3. ???
+4. profit
 
 ## Basic usage
 Create todo tasks and specify a target date to have it completed by. 
