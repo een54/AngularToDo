@@ -1,2 +1,6 @@
 /bower_components/*
 /node_modules/*
+src/js/jquery
+src/js/angular
+src/js/angular-animate
+doc

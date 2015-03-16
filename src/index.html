@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="todoApp" lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/css/style.css " />
+	<!--<nav>
+		<a href="">Home</a>
+		<a href="">Log In</a>
+		<a href="">My Account</a>
+	</nav> -->
+</head>
+
+<body ng-controller="TodoController">
+	
+	<div class="heading">
+		<p> Angular ToDo App </p>
+	</div>
+
+	<div class="eventList">				
+		<div id="signpostDiv" ng-include src="'/html/signpost.html'"></div>		
+
+		<archived-events  archivetxt='Archive' archive='{{false}}'></archived-events>
+	</div>
+
+	<div class="configDiv">
+		<p> Configuration </p>
+		<form class="createForm" ng-submit="addTodo()">
+			<input type="text" ng-model="todoText" size="30" placeholder="Add new to do here">
+			<input type="text" id="datepicker-field" placeholder="Add target date here">
+			<input class="btn-primary" type="submit" value="add">
+			</br>
+			<span> Show Archived? </span>
+			<input type="checkbox" ng-model="showArchived">
+		</form>
+	</div>
+
+	<div class="eventList" ng-show="showArchived">
+		<span> {{remainingArchived()}} of {{(data|filter:{archived: true}).length}} remaining to do!</span>
+		<archived-events archivetxt='Unarchive 'archive='{{true}}'></archived-events>
+	</div>
+
+	<script src="/js/angular/angular.min.js"></script>
+	<script src="/js/jquery/dist/jquery.min.js"></script>
+	<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>	
+	<script src="/js/angular-animate/angular-animate.min.js"></script>		
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script> 
+	<script src="\js\todoApp\todoApp.js"></script>
+	<script src="\js\todoApp\todoAppController.js"></script> 
+	<script src="\js\todoApp\eventList.js"></script>
+	<script src="\js\datepicker\datepicker.js"></script>
+	<script type="text/javascript">
+	$('#datepicker-field').DatePickerTotal();
+</script> 
+
+</body>
+
+</html>

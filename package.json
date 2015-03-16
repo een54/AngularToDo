@@ -14,6 +14,7 @@
     "grunt-cssc": "*",
     "grunt-htmlhint": "*",
     "grunt-jsdoc": "^0.5.8",
+    "grunt-jsdoc-ng": "0.0.3",
     "matchdep": "*"
   }
 }

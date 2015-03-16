@@ -3,8 +3,11 @@
 *	Standard elements
 *
 *************************************************/
+nav {
+	background-color:#E6E6E6;
+}
 body {
-	background-color: white;
+	background-color: #F2F2F2;
 	font-family: impact;
 }
 li {
@@ -91,7 +94,7 @@ li.span {
 #signpostDiv p { 
 	display: inline-block;
 	margin: 0 auto 0 auto;	
-	background: url("../../Assets/signpost.png") center center no-repeat;
+	background: url("/assets/signpost.png") center center no-repeat;
 	background-size: 100% 100%;
     height: 150px;
     width: 150px;

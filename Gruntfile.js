@@ -30,7 +30,7 @@ require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 		            'head-script-disabled': true,
 		            'style-disabled': true
 		        },
-		        src: ['html/*.html']
+		        src: ['html/**/*.html']
 		    }
 		},
 
@@ -49,7 +49,7 @@ require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 		            consolidateMediaQueries:    true
 		        },
 		        files: {
-		            'build/css/master.css': 'css/*.css'
+		            'build/css/master.css': 'css/**/*.css'
 		        }
 		    }
 		},
@@ -88,11 +88,22 @@ require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
       		}
     	},
 
+    	'jsdoc-ng' : {
+			  'mysubtaskname' : {
+			    src: ['src/js/**/*.js' ],
+			    dest: 'docs',
+			    template : 'jsdoc-ng',
+			    options: {
+			      // ... 
+		    }
+		  }
+		},
+
     	// Will minify JS files in to one big minified JS file
 		uglify: {
 		    build: {
 		        files: {
-		            'build/js/base.min.js': ['js/src/*.js']
+		            'build/js/base.min.js': ['/src/todoApp/**/*.js']
 		        }
 		    }
 		},
@@ -100,18 +111,17 @@ require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 		// Creates documentation for javascript files from comments
 		jsdoc: {
 			dist: {
-				src: 'js/src/*.js',
+				src: ['src/js/todoApp/**/*.js'],
 				options: {
 					destination: 'doc'
 				}
 			}
 		},
-
 		jasmine: { 
-			src: 'js/src/*.js',
+			src: 'src/js/**/*.js',
 			options: { 
-				specs: 'js/spec/*Spec.js',
-				helpers: 'js/spec/*Helper.js',
+				specs: 'src/js/spec/*Spec.js',
+				helpers: 'src/js/spec/*Helper.js',
 				keepRunner: true
 			}
 		},

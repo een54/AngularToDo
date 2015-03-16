@@ -1,0 +1,8 @@
+<ul>
+	<li ng-repeat="todo in showAttr()" class="standardTodo">
+  		<span class="done-{{todo.done}}">{{todo.todoText}} -- Created on: {{todo.createdDate}}</span>
+  		<button class="doneButton" ng-click="archive(todo.$id)">{{archivetxt}}</button>
+  		<button class="doneButton" ng-model="todo.done" ng-click="doneClick(todo.$id)">Done</button>   
+  		<div style="clear:both"></div>
+	</li>			
+</ul>
