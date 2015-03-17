@@ -1,0 +1,9 @@
+<p> Configuration </p>
+<form class="createForm" ng-submit="addTodo()">
+	<input type="text" ng-model="todoText" size="30" placeholder="Add new to do here">
+	<input type="text" id="datepicker-field" placeholder="Add target date here">
+	<input class="btn-primary" type="submit" value="add">
+	</br>
+	<span> Show Archived? </span>
+	<input type="checkbox" ng-model="$parent.showArchived">
+</form>

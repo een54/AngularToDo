@@ -21,21 +21,10 @@
 
 	<div class="eventList">				
 		<div id="signpostDiv" ng-include src="'/html/signpost.html'"></div>		
-
 		<archived-events  archivetxt='Archive' archive='{{false}}'></archived-events>
 	</div>
 
-	<div class="configDiv">
-		<p> Configuration </p>
-		<form class="createForm" ng-submit="addTodo()">
-			<input type="text" ng-model="todoText" size="30" placeholder="Add new to do here">
-			<input type="text" id="datepicker-field" placeholder="Add target date here">
-			<input class="btn-primary" type="submit" value="add">
-			</br>
-			<span> Show Archived? </span>
-			<input type="checkbox" ng-model="showArchived">
-		</form>
-	</div>
+	<div class="configDiv" ng-include src="'/html/configuration.html'"></div>
 
 	<div class="eventList" ng-show="showArchived">
 		<span> {{remainingArchived()}} of {{(data|filter:{archived: true}).length}} remaining to do!</span>
